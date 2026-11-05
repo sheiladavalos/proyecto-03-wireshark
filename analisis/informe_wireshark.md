@@ -75,6 +75,14 @@ Este resultado confirma que se recibió una respuesta exitosa para la petición 
 
 Sin embargo, no demuestra por sí solo que toda la comunicación sea segura ni que el sistema esté libre de amenazas.
 
+### 5.4. Correlación de paquetes mediante Wireshark y TShark
+
+Mediante el análisis de la captura con Wireshark y la herramienta TShark, se identificó una solicitud HTTP HEAD (paquete 122), enviada desde la dirección IP 10.0.2.15 hacia 104.20.23.154. Posteriormente, se observó una respuesta HTTP 200 OK (paquete 124), correspondiente al mismo flujo TCP. Esto confirma que el servidor recibió y respondió correctamente a la solicitud.
+
+Para verificar la correlación entre ambos paquetes, se utilizó el siguiente comando:
+
+ tshark -r ../evidencias/captura_http.pcapng -Y 'frame.number == 122 || frame.number == 124'
+
 ## 6. Interpretación desde SOC / Blue Team
 
 Desde una perspectiva de monitoreo defensivo, el tráfico observado es compatible con una comunicación web normal.
@@ -112,7 +120,7 @@ Resultado obtenido:
 `evidencias/captura_http.pcapng: OK`
 
 La verificación confirma que el archivo coincide con el hash registrado.
-Mediante el análisis de la captura con Wireshark y la herramienta TShark, se identificó una solicitud HTTP HEAD (paquete 122), enviada desde la dirección IP 10.0.2.15 hacia 104.20.23.154. Posteriormente, se observó una respuesta HTTP 200 OK (paquete 124), correspondiente al mismo flujo TCP. Esto confirma que el servidor recibió y respondió correctamente a la solicitud.++++++++
+
 
 ## 8. Consideraciones de seguridad
 
