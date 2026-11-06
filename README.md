@@ -74,11 +74,11 @@ Resultado obtenido:
 
 La carpeta `evidencias/` contiene:
 
-- `captura_http.pcapng`: captura original del tráfico.
-- `wireshark_solicitud_http.png`: evidencia visual de la solicitud HEAD.
-- `wireshark_respuesta_200.png`: evidencia visual de la respuesta HTTP 200 OK.
+- [captura_http.pcapng](evidencias/captura_http.pcapng): captura original del tráfico.
+- [wireshark_solicitud_http.png](evidencias/wireshark_solicitud_http.png): evidencia visual de la solicitud HEAD.
+- [wireshark_respuesta_200.png](evidencias/wireshark_respuesta_200.png): evidencia visual de la respuesta HTTP 200 OK.
 
-El informe técnico completo se encuentra en `analisis/informe_wireshark.md`.
+El informe técnico completo se encuentra disponible en [informe_wireshark.md](analisis/informe_wireshark.md).
 
 ## 9. Conclusión
 
